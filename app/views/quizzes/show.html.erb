@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Argomento:</strong>
+  <%= @quiz.subject %>
+</p>
+
+<p>
+  <strong>Domanda:</strong>
+  <%= @quiz.question %>
+</p>
+
+<p>
+   <%= image_tag @quiz.img_url, :size => '300x300' %>
+</p>
+
+<p>
+<i><%= render @quiz.answers %></i>
+</p>
+
+<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+<%= link_to 'Back', quizzes_path %>

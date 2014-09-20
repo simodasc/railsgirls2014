@@ -1,0 +1,9 @@
+
+<div>
+<br>
+<i><b><%= link_to answer.text,
+front_end_answer_path( { :quiz_id => @quiz.id, :answer_id => answer.id }),
+{:class => "rispondi", "data-id" => answer.id } %>
+</i></b>
+<br>
+</div>

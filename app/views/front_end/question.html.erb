@@ -1,0 +1,21 @@
+
+<h1><%= @quiz.subject %></h1>
+<h2><%= @quiz.question %></h2>
+<%= render partial: 'answer', collection: @quiz.answers %>
+<br>
+<br>
+<p>
+   <%= image_tag @quiz.img_url, :size => '300x300' %>
+</p>
+
+
+  
+<%#= javascript_tag <<EOS
+$(function() {
+$('.rispondi').click(function() {
+window.location = "/front_end/answer?quiz_id=#{ @quiz.id }&answer_id=" + event.target.data('id');
+return false;
+});
+})
+EOS
+%>	
